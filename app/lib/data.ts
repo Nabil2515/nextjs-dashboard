@@ -9,6 +9,7 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+
 const sql = postgres(process.env.POSTGRES_URL!, { ssl: 'require' });
 
 export async function fetchRevenue() {
@@ -16,12 +17,12 @@ export async function fetchRevenue() {
     // Artificially delay a response for demo purposes.
     // Don't do this in production :)
 
-    // console.log('Fetching revenue data...');
-    // await new Promise((resolve) => setTimeout(resolve, 3000));
+     console.log('Fetching revenue data...');
+     await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue[]>`SELECT * FROM revenue`;
 
-    // console.log('Data fetch completed after 3 seconds.');
+     console.log('Data fetch completed after 3 seconds.');
 
     return data;
   } catch (error) {
@@ -214,5 +215,32 @@ export async function fetchFilteredCustomers(query: string) {
   } catch (err) {
     console.error('Database Error:', err);
     throw new Error('Failed to fetch customer table.');
+  }
+}
+import fetch from 'node-fetch';
+
+export async function fetchFilteredTickets(query: string, currentPage: number) {
+  const ITEMS_PER_PAGE = 6;
+  const offset = (currentPage - 1) * ITEMS_PER_PAGE;
+  const startOfBookingDates = '2025-02-13'; // Replace with dynamic values if needed
+  const endOfBookingDates = '2025-02-13'; // Replace with dynamic values if needed
+
+  try {
+    const response = await fetch(`http://localhost:8080/v1/tickets/bookingDateBetween?startOfBookingDates=${startOfBookingDates}&endOfBookingDates=${endOfBookingDates}&page=${offset}&size=${ITEMS_PER_PAGE}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'application/json',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+
+    const tickets = await response.json();
+    return tickets;
+  } catch (error) {
+    console.error('API Error:', error);
+    throw new Error('Failed to fetch filtered tickets.');
   }
 }

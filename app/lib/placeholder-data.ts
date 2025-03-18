@@ -61,8 +61,128 @@ const invoices = [
     status: 'pending',
     date: '2022-11-14',
   },
-  // ...
+  {
+    customer_id: customers[2].id,
+    amount: 7850,
+    status: 'paid',
+    date: '2023-01-10',
+  },
+  {
+    customer_id: customers[3].id,
+    amount: 42900,
+    status: 'overdue',
+    date: '2023-02-18',
+  },
+  {
+    customer_id: customers[4].id,
+    amount: 14250,
+    status: 'paid',
+    date: '2023-03-22',
+  },
+  {
+    customer_id: customers[5].id,
+    amount: 31895,
+    status: 'pending',
+    date: '2023-04-15',
+  },
+  {
+    customer_id: customers[0].id,
+    amount: 27500,
+    status: 'overdue',
+    date: '2023-05-07',
+  },
+  {
+    customer_id: customers[1].id,
+    amount: 9650,
+    status: 'paid',
+    date: '2023-06-30',
+  },
+  {
+    customer_id: customers[2].id,
+    amount: 18400,
+    status: 'pending',
+    date: '2023-07-25',
+  },
+  {
+    customer_id: customers[3].id,
+    amount: 23075,
+    status: 'overdue',
+    date: '2023-08-12',
+  },
+  {
+    customer_id: customers[4].id,
+    amount: 5050,
+    status: 'paid',
+    date: '2023-09-05',
+  },
+  {
+    customer_id: customers[5].id,
+    amount: 15000,
+    status: 'pending',
+    date: '2023-10-10',
+  },
+  {
+    customer_id: customers[0].id,
+    amount: 27850,
+    status: 'overdue',
+    date: '2023-11-20',
+  },
+  {
+    customer_id: customers[1].id,
+    amount: 19450,
+    status: 'paid',
+    date: '2023-12-04',
+  },
+  {
+    customer_id: customers[2].id,
+    amount: 37500,
+    status: 'pending',
+    date: '2024-01-17',
+  },
+  {
+    customer_id: customers[3].id,
+    amount: 8200,
+    status: 'paid',
+    date: '2024-02-09',
+  },
+  {
+    customer_id: customers[4].id,
+    amount: 26700,
+    status: 'overdue',
+    date: '2024-03-03',
+  },
+  {
+    customer_id: customers[5].id,
+    amount: 12895,
+    status: 'pending',
+    date: '2024-04-22',
+  },
+  {
+    customer_id: customers[0].id,
+    amount: 49000,
+    status: 'overdue',
+    date: '2024-05-11',
+  },
+  {
+    customer_id: customers[1].id,
+    amount: 16750,
+    status: 'paid',
+    date: '2024-06-27',
+  },
+  {
+    customer_id: customers[2].id,
+    amount: 29800,
+    status: 'pending',
+    date: '2024-07-19',
+  },
+  {
+    customer_id: customers[3].id,
+    amount: 41500,
+    status: 'overdue',
+    date: '2024-08-08',
+  },
 ];
+
 
 const revenue = [
   { month: 'Jan', revenue: 2000 },

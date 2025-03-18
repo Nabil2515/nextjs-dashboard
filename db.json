@@ -1,0 +1,103 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "tickets": [
+    {
+      "id": "550e8400-e29b-41d4-a716-446655440000",
+      "supplierId": "SUP123",
+      "clientId": "CLI456",
+      "rizCode": "RIZ789",
+      "signature": "Agent Signature",
+      "ap": "Client Contact",
+      "gdsOfficeId": "GDS001",
+      "ticketNumber": "TK123456",
+      "originNumber": "TK654321",
+      "passenger": "John Doe",
+      "pnrCompany": "PNR123",
+      "pnrAmadeus": "PNR456",
+      "bookingClass": "Economy",
+      "network": "International",
+      "bookingDate": "2025-03-17",
+      "date": "2025-03-17",
+      "status": "ISSUED",
+      "source": "Amadeus",
+      "sourceFormat": "PDF",
+      "transportingCarrier": {
+        "code": "AA",
+        "name": "American Airlines"
+      },
+      "departureDestination": {
+        "locations": "JFK-LHR",
+        "departureDate": "2025-03-18",
+        "departureTime": "08:00",
+        "arrivalDate": "2025-03-18",
+        "arrivalTime": "20:00"
+      },
+      "totalPrice": {
+        "baseAmount": 500,
+        "totalAmount": 650,
+        "treasuryDZ": 10,
+        "taxXE": 50,
+        "surchargeYR": 30,
+        "timbreDZ": 5,
+        "taxesXT": 55
+      }
+    },
+    {
+      "id": "550e8400-e29b-41d4-a716-255455555",
+      "supplierId": "SUP123",
+      "clientId": "CLI456",
+      "rizCode": "RIZ789",
+      "signature": "Agent Signature",
+      "ap": "Client Contact",
+      "gdsOfficeId": "GDS001",
+      "ticketNumber": "TK123456",
+      "originNumber": "TK654321",
+      "passenger": "John Doe",
+      "pnrCompany": "PNR123",
+      "pnrAmadeus": "PNR456",
+      "bookingClass": "Economy",
+      "network": "International",
+      "bookingDate": "2025-03-17",
+      "date": "2025-03-17",
+      "status": "ISSUED",
+      "source": "Amadeus",
+      "sourceFormat": "PDF",
+      "transportingCarrier": {
+        "code": "AA",
+        "name": "American Airlines"
+      },
+      "departureDestination": {
+        "locations": "CZL-LHR",
+        "departureDate": "2025-03-18",
+        "departureTime": "08:00",
+        "arrivalDate": "2025-03-18",
+        "arrivalTime": "20:00"
+      },
+      "totalPrice": {
+        "baseAmount": 1000,
+        "totalAmount": 650,
+        "treasuryDZ": 10,
+        "taxXE": 50,
+        "surchargeYR": 30,
+        "timbreDZ": 5,
+        "taxesXT": 55
+      }
+    }
+  ]
+}
